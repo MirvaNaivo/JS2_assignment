@@ -2,3 +2,19 @@ body {
     background-color: darkcyan;
 }
 
+div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.button {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 16px 32px;
+}
+
+.label {
+    font-family: Arial, Helvetica, sans-serif;
+}

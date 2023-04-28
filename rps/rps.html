@@ -6,5 +6,16 @@
 </head>
 <body>
     <script src="rps.js"></script>
+    <div>
+        <form>
+            <input type="button" class="button" value="Rock" onclick="setPlayerSelection('rock')">
+            <input type="button" class="button" value="Paper" onclick="setPlayerSelection('paper')">
+            <input type="button" class="button" value="Scissors" onclick="setPlayerSelection('scissors')"><br><br>
+            <label for="result" class="label">Result:</label><br>
+            <p id="result">And the result is...</p>
+            <input type="button" class="button" value="Play" onclick="gamePlay()">
+            <input type="button" class="button" value="Again" onclick="playRound()">
+        </form>
+    </div>
 </body>
 </html>
