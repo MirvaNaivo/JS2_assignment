@@ -1,12 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Trirong);
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: darkolivegreen;
     margin: 0;   
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Merriweather';
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(2, 62, 2);
+    background-color: rgb(67, 85, 37);
 }
 
 div {
@@ -16,7 +22,7 @@ div {
     font-family: 'Open Sans';
 }
 
-h1 {
+.heading1 {
     color: white;
     text-shadow: 2px 2px 5px rgb(2, 62, 2);
     text-align: center;
@@ -36,12 +42,3 @@ a:hover {
     background-color: rgb(2, 70, 2);
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    font-family: 'Merriweather';
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 5px rgb(2, 62, 2);
-    background-color: rgb(67, 85, 37);
-}
