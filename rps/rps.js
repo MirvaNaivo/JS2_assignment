@@ -11,7 +11,7 @@ let losses = 0;
 let playerSelection = "";
 let computerSelection = "";
 let result = "";
-let counter = 0;
+let points = 0;
 
 function setPlayerSelection(selection) {
     playerSelection = selection.toUpperCase();
@@ -20,57 +20,66 @@ function setPlayerSelection(selection) {
 }
 
 function playRound(playerSelection, computerSelection) {
-    counter++;
-    console.log(counter);
+    console.log(points);
 
-    while (counter < 5) {
+    while (points < 5) {
         let option = computerPlay();
         computerSelection = option.toUpperCase();
 
         switch (playerSelection) {
             case "ROCK":
-                if (computerSelection == "ROCK") {
-                    ties++;
-                    return document.getElementById("result").innerHTML = "It's a tie!";
-                }
-                else if (computerSelection == "PAPER") {
-                    losses++;
-                    return document.getElementById("result").innerHTML = "You Lose! Paper beats Rock!";
-                }
-                else if (computerSelection == "SCISSORS") {
-                    wins++;
-                    return document.getElementById("result").innerHTML = "You Win! Rock beats Scissors!";
+                switch (computerSelection) {
+                    case "ROCK":
+                        ties++;
+                        return document.getElementById("result").innerHTML = "It's a tie!";
+                    case "PAPER":
+                        losses++;
+                        return document.getElementById("result").innerHTML = "You Lose! Paper beats Rock!";
+                    case "SCISSORS":
+                        wins++;
+                        points++;
+                        return document.getElementById("result").innerHTML = "You Win! Rock beats Scissors!";
                 }
             case "PAPER":
-                if (computerSelection == "PAPER") {
-                    ties++;
-                    return document.getElementById("result").innerHTML = "It's a tie!";
-                }
-                else if (computerSelection == "SCISSORS") {
-                    losses++;
-                    return document.getElementById("result").innerHTML = "You Lose! Scissors beats Paper!";
-                }
-                else if (computerSelection == "ROCK") {
-                    wins++;
-                    return document.getElementById("result").innerHTML = "You Win! Paper beats Rock!";
+                switch (computerSelection) {
+                    case "PAPER":
+                        ties++;
+                        return document.getElementById("result").innerHTML = "It's a tie!";
+                    case "SCISSORS":
+                        losses++;
+                        return document.getElementById("result").innerHTML = "You Lose! Scissors beats Paper!";
+                    case "ROCK":
+                        wins++;
+                        points++;
+                        return document.getElementById("result").innerHTML = "You Win! Paper beats Rock!";
                 }
             case "SCISSORS":
-                if (computerSelection == "SCISSORS") {
-                    ties++;
-                    return document.getElementById("result").innerHTML = "It's a tie!";
-                }
-                else if (computerSelection == "ROCK") {
-                    losses++;
-                    return document.getElementById("result").innerHTML = "You Lose! Rock beats Scissors!";
-                }
-                else if (computerSelection == "PAPER") {
-                    wins++;
-                    return document.getElementById("result").innerHTML = "You Win! Scissors beats Paper!";
+                switch (computerSelection) {
+                    case "SCISSORS":
+                        ties++;
+                        return document.getElementById("result").innerHTML = "It's a tie!";
+                    case "ROCK":
+                        losses++;
+                        return document.getElementById("result").innerHTML = "You Lose! Rock beats Scissors!";
+                    case "PAPER":
+                        wins++;
+                        points++;
+                        return document.getElementById("result").innerHTML = "You Win! Scissors beats Paper!";
                 }
         }
     }
 
-    if( counter == 5) {
+    if (points == 5) {
         document.getElementById("score").innerHTML = "Game over! Scores: \n wins: " + wins + " ties: " + ties + " losses: " + losses;
+
+        if (wins > losses) {
+            return document.getElementById("winner").innerHTML = "Congratulations, You are the Winner!";
+        }
+        else if (losses > wins) {
+            return document.getElementById("winner").innerHTML = "Oh no, You Lost.."
+        }
+        else {
+            return document.getElementById("winner").innerHTML = "It seems to be a tie"
+        }
     }
 }
