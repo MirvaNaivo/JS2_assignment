@@ -1,5 +1,5 @@
 # JS2_assignment
 
-Rock Paper Scissors against a computer, with simple UI.
+Rock Paper Scissors against the computer, with simple UI.
 
 https://mirvanaivo.github.io/JS2_assignment/
