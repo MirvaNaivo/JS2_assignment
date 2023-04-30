@@ -12,11 +12,10 @@
     <div>
         <form>
             <label>Click a button to choose rock, paper or scissors</label><br><br>
-            <input type="button" class="button" value="Rock" onclick="setPlayerSelection('rock')">
-            <input type="button" class="button" value="Paper" onclick="setPlayerSelection('paper')">
-            <input type="button" class="button" value="Scissors" onclick="setPlayerSelection('scissors')"><br><br>
+            <input type="button" class="button" value="Rock" onclick="playRound('rock')">
+            <input type="button" class="button" value="Paper" onclick="playRound('paper')">
+            <input type="button" class="button" value="Scissors" onclick="playRound('scissors')"><br><br>
             <p id="result" class="result">And the result is...</p>
-            <p id="score" class="score"></p>
             <p id="winner" class="winner"></p>
         </form>
     </div>
