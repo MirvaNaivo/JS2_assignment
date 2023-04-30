@@ -1,12 +1,13 @@
+let points = 0;
+let wins = 0;
+let losses = 0;
+
 function playRound(playerChoice) {
-    let wins = 0;
-    let losses = 0;
-    let points = 0;
-    
     while (points < 5) {
         if ((playerChoice === 'rock' && computerPlay() === 'scissors') ||
             (playerChoice === 'paper' && computerPlay() === 'rock') ||
             (playerChoice === 'scissors' && computerPlay() === 'paper')) {
+            points++;
             wins++;
             return document.getElementById("result").innerHTML = "You won!";
         }
