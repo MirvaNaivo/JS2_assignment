@@ -9,15 +9,22 @@
     <header class="header">
         <p>Play against the computer and see who wins!</p>
     </header>
-    <div>
-        <form>
-            <label>Click a button to choose rock, paper or scissors</label><br><br>
-            <input type="button" class="button" value="Rock" onclick="playRound('rock')">
-            <input type="button" class="button" value="Paper" onclick="playRound('paper')">
-            <input type="button" class="button" value="Scissors" onclick="playRound('scissors')"><br><br>
-            <p id="result" class="result">And the result is...</p>
-            <p id="winner" class="winner"></p>
-        </form>
+    <p class="instruction">Click a button to choose rock, paper or scissors</p>
+    <div id="buttons" class="buttons">
+        <button type="button" class="button" id="rock">Rock</button>
+        <button type="button" class="button" id="paper">Paper</button>
+        <button type="button" class="button" id="scissors">Scissors</button>
+    </div>
+    <p id="result" class="result">And the result is...</p>
+    <div class="scoreboard">
+        <div id="player" class="player">0</div>
+        <div>-</div>
+        <div id="computer" class="computer">0</div>
+    </div>
+    <p id="winner" class="winner"></p>
+    <div id="again" class="again">
+        <p>Wanna play again?</p>
+        <button type="button" class="reset" id="reset">Reset</button>
     </div>
 </body>
 </html>

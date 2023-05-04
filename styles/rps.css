@@ -15,11 +15,17 @@ body {
     background-color: rgb(1, 100, 100);
 }
 
-div {
+.instruction {
+    font-family: 'Open Sans';
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     font-family: 'Open Sans';
     padding: 10px;
 }
@@ -27,14 +33,62 @@ div {
 .button {
     background-color: rgb(123, 164, 177);
     padding: 16px 32px;
+    margin: 20px;
 }
 
 .result {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans';
     border: double 5px black;
     padding: 5px;
 }
 
 .winner {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans';
     font-weight: bold;
     font-size: x-large;
 } 
+
+.scoreboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    font-family: 'Open Sans';
+    font-size: 50px;
+}
+
+.player {
+    border: solid 2px black;
+    padding: 10px;
+    margin: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.computer {
+    border: solid 2px black;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(61, 32, 87);
+    color: white;
+}
+
+.again {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans';
+    visibility: hidden;
+}
+
+.reset {
+    background-color: rgb(14, 63, 78);
+    padding: 16px 32px;
+    margin: 20px;
+}
